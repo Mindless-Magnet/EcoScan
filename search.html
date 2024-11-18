@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoScan - Product Search</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+    <link href="search.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
@@ -34,17 +34,22 @@
                             <input type="text" placeholder="Search by product name or brand..." class="search-input">
                         </div>
                         <button type="submit" class="search-button primary">Search</button>
+                        
                         <button type="button" class="search-button secondary">
-                            <i class="fas fa-camera"></i> Scan
+                            <a href="/scan.html">
+                                <i class="fas fa-camera"></i> Scan
+                            </a>
                         </button>
+
                     </form>
                 </div>
 
                 <!-- Search Results -->
                 <div class="search-results">
                     <!-- Result Item -->
+                    <a href="/product.html">
                     <div class="result-item">
-                        <img src="/api/placeholder/80/80" alt="Product Image" class="result-image">
+                        <img src="https://placehold.co/150" alt="Product Image" class="result-image">
                         <div class="result-details">
                             <h3>Organic Granola</h3>
                             <p>Nature's Best</p>
@@ -60,10 +65,13 @@
                             </div>
                         </div>
                     </div>
+                    </a>
 
                     <!-- Result Item -->
+                    <a href="/product.html">
+
                     <div class="result-item">
-                        <img src="/api/placeholder/80/80" alt="Product Image" class="result-image">
+                        <img src="https://placehold.co/150" alt="Product Image" class="result-image">
                         <div class="result-details">
                             <h3>Plant-based Yogurt</h3>
                             <p>Green Foods</p>
@@ -79,6 +87,7 @@
                             </div>
                         </div>
                     </div>
+                    </a>
                 </div>
 
                 <!-- No Results State -->
@@ -87,9 +96,11 @@
                         <i class="fas fa-box-open"></i>
                         <h2>Product Not Found</h2>
                         <p>We couldn't find this product in our database.</p>
-                        <button class="cta-button primary">
-                            <i class="fas fa-plus"></i>
-                        </button>
+                        <a href="/scan.html">
+                            <button class="cta-button primary">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
