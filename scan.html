@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoScan - Product Scan</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link href="scan.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-leaf"></i> EcoScan
+            </a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="scan-page">
+        <div class="container">
+            <div class="scan-container">
+                <h1>Scan Product</h1>
+                
+                <!-- Progress Indicator -->
+                <div class="scan-progress">
+                    <div class="progress-step active">
+                        <div class="step-number">1</div>
+                        <span>Product Name</span>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-number">2</div>
+                        <span>Product Image</span>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-number">3</div>
+                        <span>Nutrition</span>
+                    </div>
+                    <div class="progress-step">
+                        <div class="step-number">4</div>
+                        <span>Ingredients</span>
+                    </div>
+                </div>
+
+                <!-- Scan Sections -->
+                <div class="scan-sections">
+                    <!-- Product Name Section -->
+                    <section class="scan-section active" id="productNameSection">
+                        <h2>Enter Product Name</h2>
+                        <div class="input-group">
+                            <input type="text" id="productName" placeholder="Product Name" class="scan-input">
+                            <button class="scan-button primary">Next</button>
+                        </div>
+                    </section>
+
+                    <!-- Product Image Section -->
+                    <section class="scan-section" id="productImageSection">
+                        <h2>Product Image</h2>
+                        <div class="scan-box">
+                            <div class="scan-preview">
+                                <i class="fas fa-camera"></i>
+                                <p>Position the product in frame</p>
+                            </div>
+                            <div class="scan-controls">
+                                <button class="scan-button secondary">
+                                    <i class="fas fa-camera"></i> Take Photo
+                                </button>
+                                <button class="scan-button primary">Next</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Nutrition Table Section -->
+                    <section class="scan-section" id="nutritionSection">
+                        <h2>Nutrition Information</h2>
+                        <div class="scan-box">
+                            <div class="scan-preview">
+                                <i class="fas fa-table"></i>
+                                <p>Position the nutrition table in frame</p>
+                            </div>
+                            <div class="scan-controls">
+                                <button class="scan-button secondary">
+                                    <i class="fas fa-camera"></i> Take Photo
+                                </button>
+                                <button class="scan-button primary">Next</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Ingredients Section -->
+                    <section class="scan-section" id="ingredientsSection">
+                        <h2>Ingredients List</h2>
+                        <div class="scan-box">
+                            <div class="scan-preview">
+                                <i class="fas fa-list"></i>
+                                <p>Position the ingredients list in frame</p>
+                            </div>
+                            <div class="scan-controls">
+                                <button class="scan-button secondary">
+                                    <i class="fas fa-camera"></i> Take Photo
+                                </button>
+                                <button class="scan-button primary">Submit</button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-leaf"></i> EcoScan
+                    <p>Making food transparency accessible to everyone.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h5>Product</h5>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#api">API</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h5>Stay Updated</h5>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button class="cta-button primary">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 EcoScan. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scan.js"></script>
+</body>
+</html>

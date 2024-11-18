@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoScan - Product Details</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+    <link href="product.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-leaf"></i> EcoScan
+            </a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="product-page">
+        <div class="container">
+            <!-- Product Header -->
+            <div class="product-header">
+                <h1>Nature's Best Organic Granola</h1>
+                <span class="brand-name">by Nature's Best</span>
+            </div>
+
+            <!-- Product Content Grid -->
+            <div class="product-grid">
+                <!-- Images Section -->
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="product-1.jpg" alt="Nature's Best Organic Granola">
+                        <div class="image-counter">
+                            <i class="fas fa-camera"></i>
+                            <span>1/3</span>
+                        </div>
+                    </div>
+                    <div class="image-thumbnails">
+                        <img src="product-1.jpg" alt="Product View 1" class="active">
+                        <img src="product-2.jpg" alt="Product View 2">
+                        <img src="product-3.jpg" alt="Product View 3">
+                    </div>
+                </div>
+
+                <!-- Scores Section -->
+                <div class="scores-section">
+                    <div class="score-card eco-score">
+                        <h2>Eco Score</h2>
+                        <div class="score-badge score-a">A</div>
+                        <div class="score-highlights">
+                            <div class="highlight positive">
+                                <i class="fas fa-check"></i>
+                                <span>Organic Ingredients</span>
+                            </div>
+                            <div class="highlight positive">
+                                <i class="fas fa-check"></i>
+                                <span>Recyclable Packaging</span>
+                            </div>
+                            <div class="highlight negative">
+                                <i class="fas fa-times"></i>
+                                <span>Long Transport Distance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="score-card nutri-score">
+                        <h2>Nutri Score</h2>
+                        <div class="score-badge score-b">B</div>
+                        <div class="score-highlights">
+                            <div class="highlight positive">
+                                <i class="fas fa-check"></i>
+                                <span>Low Sugar Content</span>
+                            </div>
+                            <div class="highlight positive">
+                                <i class="fas fa-check"></i>
+                                <span>High Fiber</span>
+                            </div>
+                            <div class="highlight negative">
+                                <i class="fas fa-times"></i>
+                                <span>Contains Palm Oil</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Analysis -->
+                <div class="product-analysis">
+                    <h2>Product Analysis</h2>
+                    <div class="analysis-tabs">
+                        <button class="tab-button active" data-tab="nutrition">
+                            Nutrition
+                        </button>
+                        <button class="tab-button" data-tab="ingredients">
+                            Ingredients
+                        </button>
+                        <button class="tab-button" data-tab="environmental">
+                            Environmental Impact
+                        </button>
+                    </div>
+                    
+                    <div class="tab-content active" id="nutrition">
+                        <div class="nutrition-info">
+                            <h3>Nutritional Values</h3>
+                            <table class="nutrition-table">
+                                <tr>
+                                    <th>Nutrient</th>
+                                    <th>Per 100g</th>
+                                    <th>% Daily Value</th>
+                                </tr>
+                                <tr>
+                                    <td>Energy</td>
+                                    <td>450 kcal</td>
+                                    <td>22.5%</td>
+                                </tr>
+                                <tr>
+                                    <td>Fat</td>
+                                    <td>15g</td>
+                                    <td>19%</td>
+                                </tr>
+                                <tr>
+                                    <td>Carbohydrates</td>
+                                    <td>65g</td>
+                                    <td>24%</td>
+                                </tr>
+                                <tr>
+                                    <td>Protein</td>
+                                    <td>12g</td>
+                                    <td>24%</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Summary -->
+                <div class="product-summary">
+                    <h2>Summary</h2>
+                    <p>Nature's Best Organic Granola is a health-conscious breakfast option with a strong environmental commitment. The product achieves an A eco-score thanks to its use of organic ingredients and recyclable packaging, though its transportation footprint presents room for improvement. Nutritionally, it earns a B rating, offering a good balance of nutrients with particular strengths in fiber content and moderate sugar levels.</p>
+                    <p>This granola is particularly suitable for health-conscious consumers who prioritize organic ingredients and sustainable packaging. However, those monitoring their fat intake should be mindful of portion sizes.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-leaf"></i> EcoScan
+                    <p>Making food transparency accessible to everyone.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h5>Product</h5>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#api">API</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h5>Stay Updated</h5>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button class="cta-button primary">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 EcoScan. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="product.js"></script>
+</body>
+</html>

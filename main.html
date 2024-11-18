@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoScan - Product Search</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-leaf"></i> EcoScan
+            </a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="product-page">
+        <div class="container">
+            <!-- Search Section -->
+            <div class="search-section">
+                <h1>Search Products</h1>
+                <div class="search-container">
+                    <form class="search-form">
+                        <div class="search-input-wrapper">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search by product name or brand..." class="search-input">
+                        </div>
+                        <button type="submit" class="search-button primary">Search</button>
+                        <button type="button" class="search-button secondary">
+                            <i class="fas fa-camera"></i> Scan
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Search Results -->
+                <div class="search-results">
+                    <!-- Result Item -->
+                    <div class="result-item">
+                        <img src="/api/placeholder/80/80" alt="Product Image" class="result-image">
+                        <div class="result-details">
+                            <h3>Organic Granola</h3>
+                            <p>Nature's Best</p>
+                        </div>
+                        <div class="result-scores">
+                            <div class="score-badge">
+                                <span class="score score-a">A</span>
+                                <span class="score-label">Eco</span>
+                            </div>
+                            <div class="score-badge">
+                                <span class="score score-b">B</span>
+                                <span class="score-label">Nutrition</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Result Item -->
+                    <div class="result-item">
+                        <img src="/api/placeholder/80/80" alt="Product Image" class="result-image">
+                        <div class="result-details">
+                            <h3>Plant-based Yogurt</h3>
+                            <p>Green Foods</p>
+                        </div>
+                        <div class="result-scores">
+                            <div class="score-badge">
+                                <span class="score score-a">A</span>
+                                <span class="score-label">Eco</span>
+                            </div>
+                            <div class="score-badge">
+                                <span class="score score-a">A</span>
+                                <span class="score-label">Nutrition</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results State -->
+                <div class="no-results">
+                    <div class="no-results-content">
+                        <i class="fas fa-box-open"></i>
+                        <h2>Product Not Found</h2>
+                        <p>We couldn't find this product in our database.</p>
+                        <button class="cta-button primary">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-leaf"></i> EcoScan
+                    <p>Making food transparency accessible to everyone.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h5>Product</h5>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#api">API</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h5>Stay Updated</h5>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button class="cta-button primary">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 EcoScan. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
