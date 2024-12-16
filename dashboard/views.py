@@ -99,10 +99,11 @@ def scan(request):
         food.save()
         print(context)
         food = get_object_or_404(Food, bar_code=barcode)
-        
+    
         context = {
             'food': food,
         }
+
         
         return render(request, 'product.html', context)
         
@@ -118,36 +119,3 @@ def product_detail(request, barcode):
     }
     
     return render(request, 'product.html', context)
-
-
-# # Enhanced view with search and filtering
-# def food_list(request):
-    foods = Food.objects.all()
-    
-    # Search functionality
-    search_query = request.GET.get('search')
-    if search_query:
-        foods = foods.filter(name__icontains=search_query)
-    
-    # Category filter
-    category = request.GET.get('category')
-    if category:
-        foods = foods.filter(category=category)
-    
-    # Nutri-score filter
-    nutri_score = request.GET.get('nutri_score')
-    if nutri_score:
-        foods = foods.filter(nutri_score=nutri_score)
-    
-    # Order by
-    order_by = request.GET.get('order_by', '-created_at')
-    foods = foods.order_by(order_by)
-    
-    context = {
-        'foods': foods,
-        'search_query': search_query,
-        'selected_category': category,
-        'selected_nutri_score': nutri_score,
-    }
-    
-    return render(request, 'food_list.html', context)    

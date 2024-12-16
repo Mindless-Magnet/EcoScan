@@ -201,6 +201,7 @@ body {
     text-align: center;
 }
 
+/* Score Badge Base Styles */
 .score {
     width: 40px;
     height: 40px;
@@ -213,13 +214,19 @@ body {
     margin-bottom: 0.25rem;
 }
 
-.score-a {
-    background-color: #10B981;
-}
+/* Eco Score Colors */
+.eco-score-a { background-color: #1F845A; } /* Dark Green */
+.eco-score-b { background-color: #4FB06D; } /* Green */
+.eco-score-c { background-color: #FFC12B; } /* Yellow */
+.eco-score-d { background-color: #FF7D31; } /* Orange */
+.eco-score-e { background-color: #FF4141; } /* Red */
 
-.score-b {
-    background-color: #FBBF24;
-}
+/* Nutri Score Colors */
+.nutri-score-a { background-color: #1F845A; } /* Dark Green */
+.nutri-score-b { background-color: #4FB06D; } /* Green */
+.nutri-score-c { background-color: #FFC12B; } /* Yellow */
+.nutri-score-d { background-color: #FF7D31; } /* Orange */
+.nutri-score-e { background-color: #FF4141; } /* Red */
 
 .score-label {
     font-size: 0.875rem;

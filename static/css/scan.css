@@ -1,4 +1,16 @@
-/* Scan Page Styles */
+:root {
+    --primary-color: #10B981;
+    --secondary-color: #064E3B;
+    --accent-color: #ECFDF5;
+    --text-color: #1F2937;
+    --light-text: #6B7280;
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --border-radius: 12px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
 .scan-page {
     padding: 8rem 0 4rem;
     min-height: calc(100vh - 400px);
@@ -9,165 +21,99 @@
     border-radius: var(--border-radius);
     padding: 2rem;
     box-shadow: var(--shadow-lg);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .scan-container h1 {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    text-align: center;
+    color: var(--text-color);
 }
 
-/* Progress Indicator */
-.scan-progress {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-    position: relative;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.scan-progress::before {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: #E5E7EB;
-    z-index: 1;
-}
-
-.progress-step {
-    position: relative;
-    z-index: 2;
+.scan-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
 }
 
-.step-number {
-    width: 40px;
-    height: 40px;
-    background: white;
-    border: 2px solid #E5E7EB;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.form-group label {
     font-weight: 600;
-    color: var(--light-text);
-    transition: all 0.3s ease;
+    color: var(--text-color);
 }
 
-.progress-step span {
-    color: var(--light-text);
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.progress-step.active .step-number {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    color: white;
-}
-
-.progress-step.active span {
-    color: var(--primary-color);
-}
-
-/* Scan Sections */
-.scan-sections {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.scan-section {
-    display: none;
-    animation: fadeIn 0.3s ease-out;
-}
-
-.scan-section.active {
-    display: block;
-}
-
-.scan-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-/* Product Name Section */
-.input-group {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.scan-input {
-    flex-grow: 1;
-    padding: 1rem;
+.form-group input[type="text"] {
+    padding: 0.75rem 1rem;
     border: 1px solid #E5E7EB;
     border-radius: var(--border-radius);
     font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
-.scan-input:focus {
+.form-group input[type="text"]:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
 }
 
-/* Scan Box */
-.scan-box {
+.upload-box {
+    position: relative;
     border: 2px dashed #E5E7EB;
     border-radius: var(--border-radius);
     padding: 2rem;
-    margin-bottom: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.scan-preview {
-    background: var(--accent-color);
-    border-radius: var(--border-radius);
-    height: 300px;
+.upload-box:hover {
+    border-color: var(--primary-color);
+    background-color: var(--accent-color);
+}
+
+.upload-box input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
+    gap: 1rem;
+    color: var(--light-text);
+}
+
+.upload-placeholder i {
+    font-size: 2rem;
     color: var(--primary-color);
 }
 
-.scan-preview i {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+.upload-placeholder p {
+    margin: 0;
+    font-size: 0.875rem;
 }
 
-.scan-preview p {
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.scan-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-/* Buttons */
 .scan-button {
     padding: 1rem 1.5rem;
     border-radius: var(--border-radius);
     font-weight: 600;
     border: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .scan-button.primary {
@@ -180,179 +126,93 @@
     transform: translateY(-1px);
 }
 
-.scan-button.secondary {
-    background: var(--accent-color);
-    color: var(--primary-color);
-}
-
-.scan-button.secondary:hover {
-    background: #D1FAE5;
-    transform: translateY(-1px);
-}
-
-/* Responsive Styles */
+/* Responsive Design */
 @media (max-width: 768px) {
     .scan-container {
         padding: 1.5rem;
+        margin: 0 1rem;
     }
 
-    .scan-progress {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        margin-left: 2rem;
-    }
-
-    .scan-progress::before {
-        top: 0;
-        bottom: 0;
-        left: 20px;
-        width: 2px;
-        height: auto;
-    }
-
-    .progress-step {
-        flex-direction: row;
-        gap: 1rem;
-    }
-
-    .input-group {
-        flex-direction: column;
-    }
-
-    .scan-preview {
-        height: 250px;
-    }
-
-    .scan-controls {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 480px) {
     .scan-container h1 {
         font-size: 1.5rem;
     }
 
-    .scan-section h2 {
-        font-size: 1.25rem;
-    }
-
-    .scan-preview {
-        height: 200px;
-    }
-
-    .scan-preview i {
-        font-size: 2rem;
-    }
-
-    .scan-preview p {
-        font-size: 1rem;
+    .upload-box {
+        padding: 1.5rem;
     }
 }
 
-.camera-preview {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--border-radius);
+@media (max-width: 480px) {
+    .scan-container {
+        padding: 1rem;
+    }
+
+    .form-group input[type="text"] {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .upload-placeholder i {
+        font-size: 1.5rem;
+    }
+
+    .scan-button {
+        padding: 0.75rem 1rem;
+    }
 }
 
-.captured-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: var(--border-radius);
-}
-
-.error-notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #FEE2E2;
-    color: #DC2626;
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    box-shadow: var(--shadow-md);
-    z-index: 1000;
-    animation: slideIn 0.3s ease-out;
-}
-
-@keyframes slideIn {
+/* Animation */
+@keyframes fadeIn {
     from {
-        transform: translateX(100%);
         opacity: 0;
+        transform: translateY(10px);
     }
     to {
-        transform: translateX(0);
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-
-.form-group {
-    margin-bottom: 2rem;
+.scan-container {
+    animation: fadeIn 0.3s ease-out;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    .scan-container {
+        animation: none;
+    }
 }
 
-.upload-box {
-    position: relative;
-    border: 2px dashed #ccc;
-    border-radius: 8px;
-    padding: 2rem;
-    text-align: center;
-    background: #f8f9fa;
-    cursor: pointer;
+/* Focus States for Accessibility */
+.upload-box:focus-within {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
 }
 
-.upload-box:hover {
-    border-color: #4CAF50;
-    background: #f0f8f0;
+/* Drag and Drop States */
+.upload-box.drag-over {
+    border-color: var(--primary-color);
+    background-color: var(--accent-color);
 }
 
-.upload-box input[type="file"] {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    cursor: pointer;
+/* Error States */
+.form-group.error input {
+    border-color: #EF4444;
 }
 
-.upload-placeholder {
-    color: #666;
+.form-group.error .error-message {
+    color: #EF4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
 }
 
-.upload-placeholder i {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #4CAF50;
+/* Success States */
+.form-group.success input {
+    border-color: var(--primary-color);
 }
 
-.upload-placeholder p {
-    margin: 0;
-}
-
-.scan-button.primary {
-    width: 100%;
-    padding: 1rem;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.scan-button.primary:hover {
-    background: #45a049;
+.form-group.success .success-message {
+    color: var(--primary-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
 }

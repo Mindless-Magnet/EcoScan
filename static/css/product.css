@@ -123,11 +123,17 @@
     margin: 1rem auto;
 }
 
-.score-a { background: #27AE60; }
-.score-b { background: #82CD47; }
-.score-c { background: #F1C40F; }
-.score-d { background: #E67E22; }
-.score-e { background: #E74C3C; }
+.eco-score-a { background-color: #1F845A; } /* Dark Green */
+.eco-score-b { background-color: #4FB06D; } /* Green */
+.eco-score-c { background-color: #FFC12B; } /* Yellow */
+.eco-score-d { background-color: #FF7D31; } /* Orange */
+.eco-score-e { background-color: #FF4141; } /* Red */
+
+.nutri-score-a { background-color: #1F845A; } /* Dark Green */
+.nutri-score-b { background-color: #4FB06D; } /* Green */
+.nutri-score-c { background-color: #FFC12B; } /* Yellow */
+.nutri-score-d { background-color: #FF7D31; } /* Orange */
+.nutri-score-e { background-color: #FF4141; } /* Red */
 
 .score-highlights {
     margin-top: 1.5rem;

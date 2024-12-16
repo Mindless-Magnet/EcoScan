@@ -201,5 +201,4 @@ def login(request):
 
 def logout(request):
     auth_logout(request)
-    messages.success(request, 'Logged out successfully!')
-    return render('index')
+    return render(request, 'index.html')
