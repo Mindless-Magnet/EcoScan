@@ -198,7 +198,8 @@ def login(request):
     }
     return render(request, 'login.html',context)  # Ensure this template exists and is configured
 
+
 def logout(request):
     auth_logout(request)
     messages.success(request, 'Logged out successfully!')
-    return render(request, 'index.html')
+    return render('index')

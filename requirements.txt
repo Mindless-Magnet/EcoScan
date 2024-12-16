@@ -1,0 +1,4 @@
+python-dotenv
+requests
+openai==0.2
+paddleocr>=2.0.1

@@ -45,13 +45,13 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <!-- <div class="welcome-message">
+        <div class="welcome-message">
             {% if user.is_authenticated %}
                 <p>Welcome, {{ user.username }}!</p>
             {% else %}
                 <p>Welcome, guest!</p>
             {% endif %}
-        </div> -->
+        </div>
 
         
         <div class="hero-background"></div>
@@ -203,8 +203,12 @@
             <h2>Ready to Start Scanning?</h2>
             <p>Join thousands of users making informed food choices with EcoScan.</p>
             <div class="cta-buttons">
-                <a href="{% url 'auth' %}" class="cta-button primary">Create Free Account</a>
-                <a href="{% url 'auth' %}" class="cta-button secondary">Sign In</a>
+                {% if user.is_authenticated %}
+                    <a href="/app/" class="cta-button primary">Go to Dashboard</a>
+                {% else %}
+                    <a href="{% url 'auth' %}" class="cta-button primary">Create Free Account</a>
+                    <a href="{% url 'auth' %}" class="cta-button secondary">Sign In</a>
+                {% endif %}
             </div>
         </div>
     </section>

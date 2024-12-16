@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoScan - Product Scan</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="{% static 'css/scan.css' %}" rel="stylesheet">
+    <link href="{% static 'css/search.css' %}" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-leaf"></i> EcoScan
+            </a>
+            <button class="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="scan-page">
+        <div class="container">
+            <div class="scan-container">
+                <h1>Add New Product</h1>
+                
+                <form class="scan-form" method="post" enctype="multipart/form-data" action="/app/scan/">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="productName">Barcode</label>
+                        <input type="text" id="productName" name="barcode" placeholder="Enter product name" required>
+                    </div>
+                    <!-- Product Name -->
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input type="text" id="productName" name="productName" placeholder="Enter product name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Category</label>
+                        <input type="text" id="category" name="category" placeholder="Enter category name" required>
+                    </div>
+
+                    <!-- Product Image -->
+                    <div class="form-group">
+                        <label for="productImage">Product Image</label>
+                        <div class="upload-box">
+                            <input type="file" id="productImage" name="productImage" accept="image/*" required>
+                            <div class="upload-placeholder">
+                                <i class="fas fa-upload"></i>
+                                <p>Click to upload product image</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nutrition Table -->
+                    <div class="form-group">
+                        <label for="nutritionImage">Nutrition Table Image</label>
+                        <div class="upload-box">
+                            <input type="file" id="nutritionImage" name="nutritionImage" accept="image/*" required>
+                            <div class="upload-placeholder">
+                                <i class="fas fa-upload"></i>
+                                <p>Click to upload nutrition table image</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ingredients List -->
+                    <div class="form-group">
+                        <label for="ingredientsImage">Ingredients List Image</label>
+                        <div class="upload-box">
+                            <input type="file" id="ingredientsImage" name="ingredientsImage" accept="image/*" required>
+                            <div class="upload-placeholder">
+                                <i class="fas fa-upload"></i>
+                                <p>Click to upload ingredients list image</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="scan-button primary">Submit Product</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-leaf"></i> EcoScan
+                    <p>Making food transparency accessible to everyone.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h5>Product</h5>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#pricing">Pricing</a></li>
+                            <li><a href="#api">API</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h5>Stay Updated</h5>
+                        <div class="newsletter-form">
+                            <input type="email" placeholder="Enter your email">
+                            <button class="cta-button primary">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2024 EcoScan. All rights reserved.</span>
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script> src="{% static 'js/scan.js' %}"</script>
+</body>
+</html>
