@@ -116,33 +116,33 @@
                             <thead>
                                 <tr>
                                     <th>Nutrient</th>
-                                    <th>Per 100g</th>
+                                    <th>Per Serving</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Energy</td>
-                                    <td>{{ energy|default:"0.0" }} {{ unit }}</td>
+                                    <td>{{ food.nutrient_data.nutrient.energy }} </td>
                                 </tr>
                                 <tr>
                                     <td>Proteins</td>
-                                    <td>{{ proteins|default:"0.0" }}g</td>
+                                    <td>{{ food.nutrient_data.nutrient.proteins }}g</td>
                                 </tr>
                                 <tr>
                                     <td>Saturated Fats</td>
-                                    <td>{{ saturated_fats|default:"0.0" }}g</td>
+                                    <td>{{ food.nutrient_data.nutrient.saturated_fats }}g</td>
                                 </tr>
                                 <tr>
                                     <td>Fibers</td>
-                                    <td>{{ fibers|default:"0.0" }}g</td>
+                                    <td>{{ food.nutrient_data.nutrient.fibers }}g</td>
                                 </tr>
                                 <tr>
                                     <td>Sugars</td>
-                                    <td>{{ sugar|default:"0.0" }}g</td>
+                                    <td>{{ food.nutrient_data.nutrient.sugar }}g</td>
                                 </tr>
                                 <tr>
                                     <td>Sodium</td>
-                                    <td>{{ sodium|default:"0.000" }}g</td>
+                                    <td>{{ food.nutrient_data.nutrient.sodium }}g</td>
                                 </tr>
                             </tbody>
 

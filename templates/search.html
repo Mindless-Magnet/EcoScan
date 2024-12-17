@@ -46,7 +46,7 @@
                     <div class="search-results">
                         {% for food in foods %}
                         <!-- Result Item -->
-                        <a href="/app/product/{{ food.bar_code }}/">
+                        <a href="/app/product/{{ food.bar_code }}" style="text-decoration: none;">
                         <div class="result-item">
                             <img src="{% static 'images/' %}{{ food.bar_code }}f" alt="{{ food.name }} Image" class="result-image">
                             <div class="result-details">

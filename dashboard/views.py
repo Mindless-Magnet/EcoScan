@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import render
 import os
 from django.conf import settings
@@ -116,6 +117,7 @@ def product_detail(request, barcode):
     
     context = {
         'food': food,
+        'nutrient_data_json': json.dumps(food.nutrient_data, ensure_ascii=False),
     }
     
     return render(request, 'product.html', context)
